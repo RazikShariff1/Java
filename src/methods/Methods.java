@@ -1,3 +1,5 @@
+package methods;
+
 public class Methods {
     public static void main(String[] args) {
         //  as we are using the function call in a static function the called function should also be static
@@ -33,6 +35,40 @@ public class Methods {
 //function without arguments  and with return value
 //function without arguments  and return value
 
+//in java there is only pass by value ,no pass by reference
+//simple example
+class ex{
+    public static void main(String[] args) {
+        String name="Razik";
+        change(name);
+        System.out.println(name);
+        int a=20,b=10;
+        swap(a,b);
+        System.out.printf("%d and %d",a,b);
 
+    }
+    static void change(String name){
+        name="Shariff";
+    }
+    static void swap(int a,int b){
+        int temp=a;
+        a=b;
+        b=temp;
+    }
+}
+//run this class and see ,
+//ie a new object is created where name is assigned similarly in main function
 
-
+class scope{
+    public static void main(String[] args) {
+        int a = 10;
+        {
+//            int a = 20; =>cannot initilize again but can change
+            a = 20;
+            System.out.println();
+            int b = 99;
+        }
+        System.out.println(a);
+//        System.out.println(b); cannot access the the block variable out side
+    }
+}
