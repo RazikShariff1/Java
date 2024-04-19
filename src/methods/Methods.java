@@ -65,10 +65,22 @@ class scope{
         {
 //            int a = 20; =>cannot initilize again but can change
             a = 20;
-            System.out.println();
+            System.out.println(a);
             int b = 99;
         }
         System.out.println(a);
 //        System.out.println(b); cannot access the the block variable out side
+    }
+}
+class shadow{
+    static int a=20;//a is shadowed a line 80,due to more preference to the lower priority in the block
+    public static void main(String[] args) {
+        System.out.println(a);
+        int a=100;
+        System.out.println(a);
+        fun();
+    }
+    static void fun(){
+        System.out.println(a);
     }
 }
