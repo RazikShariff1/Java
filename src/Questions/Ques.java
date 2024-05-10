@@ -1,6 +1,5 @@
-package Array;
+package Questions;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -28,7 +27,7 @@ public class Ques {
         a[idx1]=a[idx2];
         a[idx2]=temp;
     }
-    static void maxx(int a[]){
+    static void maxx(int a[]){ //similarly minn()
 //        int max=0;
 //        for (int i = 0; i < a.length; i++) {
 //            max=Math.max(max,a[i]);
@@ -55,3 +54,4 @@ public class Ques {
         }
     }
 }
+//similarly max[][] and min[][] functions in 2D array
